@@ -3,19 +3,42 @@
         <title> Olga's Portfolio </title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Kanit:500" rel="stylesheet"/>
     </head>
 </html>
 <body>
-    <img src="images/logo1.jpg" alt="logo" width="80" height="60"/>
-    <div class="topnav">
-            <a class="active" href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-    </div>
-    <!--<img id="bamboo" src="images/IMG_7744_V1.jpg" alt="bamboo" width=100%/>-->
+  <div id="wrapper">
+ 
+
+    <!-- Section with bamboo picture as background BEGINS -->
     <div id="bamboo">
-    <div>
-        I am <%= person.firstName %> <%= person.lastName %>
+      <header class="main-header">  
+        <!-- <img id="logo3" src="images/logo3.jpg" alt="logo" width="100" height="80"/> -->
+        <ul class="topnav">
+          <li><a class="active" href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header> <!--/.main-header-->  
     </div>
+    <!-- Section with bamboo picture ENDS -->
+    <div id="separator"> 
+    </div> <!-- Separator of bamboo picture and "About" section-->
+
+    <!-- Section with my name BEGINS -->
+    
+    <div id="aboutMe">
+      <img id="myImage" src="images/Olga.jpg" alt="Olga's image"/> <!--Olga's image-->
+      <div id="aboutme_paragraphs"> <!-- Div with all paragraphs BENGINS-->
+        <h1> About Olga </h1>
+        <p>
+          I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
+          <br/>
+         My technical skills include using programming languages such as JavaScript (Node.js, React), jQuery, HTML and CSS.  MySQL and MongoDB.
+        </p>
+      </div> <!-- Div with all paragraphs ENDS-->
     </div>
+    <!-- Section with my name ENDS -->
+
+  </div>
 </body>
