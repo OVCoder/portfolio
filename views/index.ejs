@@ -3,7 +3,7 @@
         <title> Olga's Portfolio </title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Kanit:500" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Merienda|Sedgwick+Ave" rel="stylesheet">
     </head>
 </html>
 <body>
@@ -14,23 +14,30 @@
     <div id="bamboo">
       <header class="main-header">  
         <!-- <img id="logo3" src="images/logo3.jpg" alt="logo" width="100" height="80"/> -->
-        <ul class="topnav">
-          <li><a class="active" href="#">About</a></li>
+        <div id="logo-name">
+          <h1>Olga Volodko</h1>
+          <h2>Ful-Stack Developer</h2>
+        </div>
+        <ul class="topnav" id="myTopnav"  >
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Work</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
         </ul>
-      </header> <!--/.main-header-->  
+      </header> <!--/.main-header--> 
+      <div id="typedtext">
+        <!-- <h1> If you can imagine it, you can achieve it. If you can dream it, you can become it</h1> -->
+      </div> 
     </div>
     <!-- Section with bamboo picture ENDS -->
-    <div id="separator"> 
-    </div> <!-- Separator of bamboo picture and "About" section-->
-
-    <!-- Section with my name BEGINS -->
+    
+    <!-- "About" Section BEGINS -->
     
     <div id="aboutMe">
       <img id="myImage" src="images/Olga.jpg" alt="Olga's image"/> <!--Olga's image-->
       <div id="aboutme_paragraphs"> <!-- Div with all paragraphs BENGINS-->
-        <h1> About Olga </h1>
+        <h1 id="aboutOlga"> About Olga </h1>
         <p>
           I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
           <br/>
@@ -38,7 +45,8 @@
         </p>
       </div> <!-- Div with all paragraphs ENDS-->
     </div>
-    <!-- Section with my name ENDS -->
+    <!-- "About" Section ENDS -->
 
   </div>
+  <script src="index.js"></script>
 </body>
