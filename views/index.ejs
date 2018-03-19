@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Merienda|Sedgwick+Ave" rel="stylesheet">
-    </head>
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Cherry+Swash" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
+      </head>
 </html>
 <body>
   <div id="wrapper">
@@ -15,16 +17,18 @@
       <header class="main-header">  
         <!-- <img id="logo3" src="images/logo3.jpg" alt="logo" width="100" height="80"/> -->
         <div id="logo-name">
-          <h1>Olga Volodko</h1>
-          <h2>Ful-Stack Developer</h2>
+          <h1>Olga Volodko <br/> Full-Stack Developer
+          </h1>
         </div>
-        <ul class="topnav" id="myTopnav"  >
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
-        </ul>
+        <nav>
+          <a href="#bamboo" id="menu-icon"></a>
+          <ul class="topnav" id="myTopnav"  >
+            <li><a href="#bamboo" class="current">Home</a></li>
+            <li><a href="#aboutMeLeft">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="contact" target="_blank">Contact</a></li>
+          </ul>
+        </nav>
       </header> <!--/.main-header--> 
       <div id="typedtext">
         <!-- <h1> If you can imagine it, you can achieve it. If you can dream it, you can become it</h1> -->
@@ -34,9 +38,11 @@
     
     <!-- "About" Section BEGINS -->
     
-    <div id="aboutMe">
-      <img id="myImage" src="images/Olga.jpg" alt="Olga's image"/> <!--Olga's image-->
-      <div id="aboutme_paragraphs"> <!-- Div with all paragraphs BENGINS-->
+    <div class="aboutMe">
+      <div id="aboutMeLeft">
+        <img id="myImage" src="images/Olga.jpg" alt="Olga's image"/> <!--Olga's image-->
+      </div>
+      <div id="aboutMeRight"> <!-- Div with all paragraphs BENGINS-->
         <h1 id="aboutOlga"> About Olga </h1>
         <p>
           I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
@@ -46,7 +52,47 @@
       </div> <!-- Div with all paragraphs ENDS-->
     </div>
     <!-- "About" Section ENDS -->
-
-  </div>
+		<!-- "Work" Section BEGINS -->
+		<div id="work" >
+				<h1 id="projects"> Olga's Projects </h1>
+      <div class="rowOfPictures">
+				<div class="gallery">
+					<a target="_blank" href="images/Hackathon_Show-Poster-Finder.jpg"> 
+						<img src="images/Hackathon_Show-Poster-Finder.jpg" alt="Hackathon project screen shot"/>
+				  </a>
+				</div>
+				<div class="gallery">
+					<a target="_blank" href="https://ov-vstda.herokuapp.com/"> 
+						<img src="images/vstda.jpg" alt="Hackathon project screen shot"/>
+					</a>
+				</div>
+	    </div>
+			<div class="rowOfPictures">
+				<div class="gallery">
+					<a target="_blank" href="https://ov-top-spots.herokuapp.com/"> 
+						<img src="images/sd_top_spots.jpg" alt="Hackathon project screen shot"/>
+					</a>
+				</div>
+				<div class="gallery">
+					<a target="_blank" href="https://ov-mortgage-calculator.herokuapp.com/"> 
+						<img src="images/mortgage_calculator.jpg" alt="Hackathon project screen shot"/>
+					</a>
+				</div>
+			</div>
+			<div class="rowOfPictures">
+					<div class="gallery">
+						<a target="_blank" href="https://ov-change-calculator.herokuapp.com/"> 
+							<img src="images/change_calculator.jpg" alt="Hackathon project screen shot"/>
+						</a>
+					</div>
+					<div class="gallery">
+						<a target="_blank" href="https://ov-mortgage-calculator.herokuapp.com/"> 
+							<img src="images/mortgage_calculator.jpg" alt="Hackathon project screen shot"/>
+						</a>
+					</div>
+				</div>
+		</div>
+		<!-- "Work" Section ENDS -->
+  </div> <!-- Wrapper div end -->
   <script src="index.js"></script>
 </body>

@@ -1,7 +1,11 @@
 body {
     background: #136a8a; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #beffda, #befffd);
-    background: linear-gradient(to left, #d9ffc0, #deffd4);
+    /* background: linear-gradient(to left, #f6ffef, #deffd4); */
+    /* background: linear-gradient(to left, #d1e0e0, #a3c2c2); */
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 @media (min-width: 769px) {
     .main-header,
@@ -13,46 +17,57 @@ body {
       align-items: center;
     }
 }
-body {
-    padding: 0;
-    margin: 0;
+
+/* Style for logo in left corner in "HOME" Section */
+#logo-name{
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  
+}
+#logo-name h1{
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: #293d3d;
+  margin: 0;
+  font-size: 1em;
 }
 
-#logo-name{
-  position: relative;
-  top: 30px;
-}
-@media (min-width: 769px) {
-  .topnav{
-    position: fixed;
-    top: 30px;
-    right:0;
-    overflow: hidden;
-  }
-}
 /*Style "Home" Section */
 #bamboo {
     width: 100%;
     height: 100vh;
-    background-image: url('images/IMG_7744_V1.jpg');
+    background-image: url('images/agave.jpeg');
+    opacity: 0.8;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center center;
     justify-content: center;
 }
 
+.topnav{
+  position: fixed;
+  top: 30px;
+  right:5px;
+  overflow: hidden;
+}
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: #16441a;
+    /* color: #16441a; */
+    color:#293d3d;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 1em;
     /* font-family: 'Kanit', sans-serif; */
-    font-family: 'Merienda', cursive;
-    background-color: #e5e79d92;
+    /* font-family: 'Merienda', cursive; */
+    /* font-family: 'Cherry Swash', cursive; */
+    /* font-family: 'Baloo Bhai', cursive; */
+    font-family: 'Source Sans Pro', sans-serif;
+    /* background-color: #e5e79d92; */
+    background-color: #f0f5f580
     
 }
 
@@ -69,87 +84,126 @@ body {
     
 }
 
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
 /* Remove bullet points in navigation bar (for unordered list) */
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-/* FOR NAV.bar: When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav li a:not(:first-child) {
-    display: none;
-  }
-  .topnav li a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* FOR NAV.bar: The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive li a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive li a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 
 /* Style for the quote on Home page*/
 #typedtext{
-  position: relative;
-  top: 350px;  
-  font-size: 5em;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%); 
+  font-size: 2.5em;
   text-align: center;
-  /* font-family: 'Gloria Hallelujah', cursive;*/
-  font-family: 'Merienda', cursive;
-  color: #0c240e;
-  text-shadow: 2px 2px 4px #e5e79d;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* color: #020200; */
+  color:#ffffff;
+  text-shadow: 5px 2px 6px #293d3d;  /*#e5e79d*/
+  /* background-color: #e5e79d92; */
 }
+/* Applying Flexible Layout to "About" Section */
+.aboutMe {
+  display: flex;
+  background-color: #f2f2f2;
+  color:#293d3d;
+} 
 
 /*Making my image round in "About" Section*/
 #myImage {
-    vertical-align: middle;
     border-radius: 50%;
-}
-@media (min-width: 769px) {
-    #aboutMe,
-    {
-      display: flex;
-    }
-   
-}
-/* Style for h1 tag in About section */
-#aboutOlga{
-    color: #31903a;
-    font-size: 3em;
+    height: 100vh;
+    width: 50vw;
 }
 
+/* #aboutMeRight {
+  float:left;
+} */
+
+/* Style for h1 tag in About section */
+#aboutOlga{
+    color: #999999;
+    font-size: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#aboutMeLeft{
+  width: 50%;
+}
 /*Paragraph styling in "About" Section*/
-p {
-  display: block;
+#aboutMeRight p {
   -webkit-margin-before: 1em;
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   font-size: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:#999999;
 }
-
-#aboutMe{
-  width: 100%;
+/******* Styling "Work" Section *********/
+#work{
   height: 100vh;
 }
+#projects{
+  color:#999999;
+  text-align: center;
+}
+/*Applying Flexible Layout to "Work" Section*/
+.rowOfPictures{
+  display: flex;
+}
+/* Styling each picture*/
+div.gallery {
+  margin: 0.5vh 2.5vw;
+  border: 1px solid #ccc;
+  float: left;
+  width: 45vw;
+}
+div.gallery:hover {
+  border: 1px solid rgb(91, 91, 91);
+}
+div.gallery img{
+  width: 45vw;
+}
 
+/*Test Test Test*/
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
 
+	/* header {
+		position: absolute;
+	} */
+
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+  }
+
+	nav:hover ul {
+		display: block;
+	}
+}
