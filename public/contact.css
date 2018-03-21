@@ -1,5 +1,31 @@
 body {
-    background-color: #e6e6e6;
+    background-color: #DCDCDC;
     margin: 0;
     padding: 0;
+    /* align-items: center; */
+    /* vertical-align: middle; */
+}
+#wrapper{
+    padding:20px;
+    margin: 20px;
+    /* vertical-align: middle; */
+    /* align-items: center; */
+    background-color: #f2f2f27e;
+    border: 3px solid #a1a1a1;
+    background-image: url('images/agave.jpeg');
+    opacity: 0.8;
+    
+}
+@media (min-width : 640px) {
+    #wrapper{
+        height: 50vh;
+        padding:10vh;
+        margin: 15vh;
+        /* vertical-align: middle; */
+        /* align-items: center; */
+        background-color: #f2f2f278;
+        background-image: url('images/agave.jpeg');
+        opacity: 0.8;
+        border: 3px solid #a1a1a1; 
+    }
 }

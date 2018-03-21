@@ -15,7 +15,7 @@
     <!-- Section with bamboo picture as background BEGINS -->
     <div id="bamboo">
       <header class="main-header">  
-        <!-- <img id="logo3" src="images/logo3.jpg" alt="logo" width="100" height="80"/> -->
+        <img id="smallImageHome" src="images/IMG_8999_portfolio1a.jpg" alt="small image of Olga"/>
         <div id="logo-name">
           <h1>Olga Volodko <br/> Full-Stack Developer
           </h1>
@@ -37,21 +37,24 @@
     <!-- Section with bamboo picture ENDS -->
     
     <!-- "About" Section BEGINS -->
-    
+    <div class="separator"></div> <!--separator-->
     <div class="aboutMe">
-      <div id="aboutMeLeft">
-        <img id="myImage" src="images/Olga.jpg" alt="Olga's image"/> <!--Olga's image-->
-      </div>
-      <div id="aboutMeRight"> <!-- Div with all paragraphs BENGINS-->
-        <h1 id="aboutOlga"> About Olga </h1>
-        <p>
-          I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
-          <br/>
-         My technical skills include using programming languages such as JavaScript (Node.js, React), jQuery, HTML and CSS.  MySQL and MongoDB.
-        </p>
-      </div> <!-- Div with all paragraphs ENDS-->
+      <!-- <div id="aboutMeContainer">   -->
+        <div id="aboutMeLeft">
+          <!-- <img id="myImage" src="images/IMG_8999_portfolio1.jpg" alt="Olga's image"/> Olga's image -->
+        </div>
+        <div id="aboutMeRight"> <!-- Div with all paragraphs BENGINS-->
+          <h1 id="aboutOlga"> About Olga </h1>
+          <p>
+            I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
+            <br/>
+          My technical skills include using programming languages such as JavaScript (Node.js, React), jQuery, HTML and CSS.  MySQL and MongoDB.
+          </p>
+        </div> <!-- Div with all paragraphs ENDS-->
+      <!-- </div>   -->
     </div>
     <!-- "About" Section ENDS -->
+    <div class="separator"></div> <!--separator-->
 		<!-- "Work" Section BEGINS -->
 		<div id="work" >
 				<h1 id="projects"> Olga's Projects </h1>
@@ -92,7 +95,15 @@
 					</div>
 				</div>
 		</div>
-		<!-- "Work" Section ENDS -->
+    <!-- "Work" Section ENDS -->
+    <div id="footer">
+      <ul id="navbar" class="navbar">
+        <li><a href="#bamboo" class="active">Home</a></li>
+        <li><a href="#aboutMeLeft">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="contact" target="_blank">Contact</a></li>
+      </ul>
+    </div>
   </div> <!-- Wrapper div end -->
   <script src="index.js"></script>
-</body>
+</body>-=

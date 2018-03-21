@@ -13,23 +13,33 @@ body {
       display: flex;
     }
     .main-header {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
+      align-items: left;
     }
 }
-
+/*Style for small image in "Home" Section*/
+#smallImageHome{
+  position: relative;
+  float: left;
+  top:15px;
+  /* left:15px; */
+  width: 10%;
+  border-radius: 50%;
+  transform: scaleX(-1);
+}
 /* Style for logo in left corner in "HOME" Section */
 #logo-name{
-  position: absolute;
+  position: relative;
   top: 30px;
-  left: 5px;
+  /* left: 180px; */
+  float: left;
   
 }
 #logo-name h1{
   font-family: 'Source Sans Pro', sans-serif; 
   color: #293d3d;
   margin: 0;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 /*Style "Home" Section */
@@ -46,7 +56,7 @@ body {
 
 .topnav{
   position: fixed;
-  top: 30px;
+  top: 15px;
   right:5px;
   overflow: hidden;
 }
@@ -60,20 +70,15 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 1em;
-    /* font-family: 'Kanit', sans-serif; */
-    /* font-family: 'Merienda', cursive; */
-    /* font-family: 'Cherry Swash', cursive; */
-    /* font-family: 'Baloo Bhai', cursive; */
+    font-size: 1.2em;
     font-family: 'Source Sans Pro', sans-serif;
     /* background-color: #e5e79d92; */
-    background-color: #f0f5f580
+    /* background-color: #f0f5f580 */
     
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #e4e78f92;
     color: black;
 }
 
@@ -112,30 +117,34 @@ ul {
 /* Applying Flexible Layout to "About" Section */
 .aboutMe {
   display: flex;
-  background-color: #f2f2f2;
+ 
+  background-color: white;
   color:#293d3d;
 } 
 
 /*Making my image round in "About" Section*/
-#myImage {
-    border-radius: 50%;
-    height: 100vh;
-    width: 50vw;
+
+#aboutMeContainer{
+  height: 80vh;
 }
-
-/* #aboutMeRight {
-  float:left;
-} */
-
 /* Style for h1 tag in About section */
 #aboutOlga{
     color: #999999;
     font-size: 2em;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
+.separator{
+  height: 5vh;
+}
 #aboutMeLeft{
-  width: 50%;
+  height: 90vh;;
+  width: 100%;
+  display: inline-block;
+  background-image:  url('images/IMG_9041_portfolio2.jpg');
+  /* background-image:  url('images/IMG_8999_portfolio1.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 120%;
 }
 /*Paragraph styling in "About" Section*/
 #aboutMeRight p {
@@ -146,10 +155,13 @@ ul {
   font-size: 2em;
   font-family: 'Source Sans Pro', sans-serif;
   color:#999999;
+  
 }
 /******* Styling "Work" Section *********/
 #work{
   height: 100vh;
+  overflow: scroll;
+  background-color: #f2f2f2;
 }
 #projects{
   color:#999999;
@@ -172,14 +184,62 @@ div.gallery:hover {
 div.gallery img{
   width: 45vw;
 }
+/* Styling for FOOTER */
+/* Bottom FOOTER styling BEGINS */
+/* Place the navbar at the bottom of the page, and make it stick */
+ul.navbar {
+  text-align: center;
+}
+ul.navbar li{
+  display: inline-block;
+}
+#navbar {
+  position: fixed;
+  bottom: 25px;
+  width: 100%;
+  /* display: block; */
+  transition: bottom 0.3s;
+  align-items: center;
+  align-self: center;
+  display: inline-block;
+  list-style-type: none;
+  background-color: #000000; 
+}
+
+/* Style the links inside the navigation bar */
+#navbar a {
+  float: left;
+  /* display: block; */
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  font-size: 15px;
+  align-self: center;
+  
+  
+}
+
+/* Change the color of links on hover */
+#navbar a:hover {
+  color: #ddd;
+}
+
+/* Add a color to the active/current link */
+#navbar a.active {
+  background-color: #000000;
+  color: white;
+}
+/* Bottom FOOTER styling ENDS */
+
+
+
 
 /*Test Test Test*/
 /*MEDIA QUERY*/
-@media only screen and (max-width : 640px) {
+/* @media only screen and (max-width : 640px) {
 
-	/* header {
-		position: absolute;
-	} */
+	
 
 	#menu-icon {
 		display:inline-block;
@@ -206,4 +266,4 @@ div.gallery img{
 	nav:hover ul {
 		display: block;
 	}
-}
+} */
