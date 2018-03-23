@@ -3,6 +3,7 @@
         <title> Olga's Portfolio </title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="responsive-index.css"
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Merienda|Sedgwick+Ave" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Cherry+Swash" rel="stylesheet">    
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
@@ -10,10 +11,9 @@
 </html>
 <body>
   <div id="wrapper">
- 
 
-    <!-- Section with bamboo picture as background BEGINS -->
-    <div id="bamboo">
+    <!-- HOME Section BEGINS -->
+    <div id="home">
       <header class="main-header">  
         <img id="smallImageHome" src="images/IMG_8999_portfolio1a.jpg" alt="small image of Olga"/>
         <div id="logo-name">
@@ -21,10 +21,10 @@
           </h1>
         </div>
         <nav>
-          <a href="#bamboo" id="menu-icon"></a>
+          <a href="#home" id="menu-icon"></a>
           <ul class="topnav" id="myTopnav"  >
-            <li><a href="#bamboo" class="current">Home</a></li>
-            <li><a href="#aboutMeLeft">About</a></li>
+            <li><a href="#home" class="current">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="contact" target="_blank">Contact</a></li>
           </ul>
@@ -34,27 +34,28 @@
         <!-- <h1> If you can imagine it, you can achieve it. If you can dream it, you can become it</h1> -->
       </div> 
     </div>
-    <!-- Section with bamboo picture ENDS -->
+    <!-- HOME Section ENDS -->
     
-    <!-- "About" Section BEGINS -->
-    <div class="separator"></div> <!--separator-->
-    <div class="aboutMe">
-      <!-- <div id="aboutMeContainer">   -->
+    <!-- "ABOUT" Section BEGINS -->
+    
+    <div class="aboutMe" id="aboutMe">
+      <div class="aboutMeContainer">  
         <div id="aboutMeLeft">
-          <!-- <img id="myImage" src="images/IMG_8999_portfolio1.jpg" alt="Olga's image"/> Olga's image -->
+          <img id="myImage" src="images/IMG_9041_portfolio2.jpg" alt="Olga's image"/> <!--Olga's image-->
         </div>
-        <div id="aboutMeRight"> <!-- Div with all paragraphs BENGINS-->
+        <div id="aboutMeRight" class="aboutMeRight">  <!--Div with all paragraphs BENGINS -->
           <h1 id="aboutOlga"> About Olga </h1>
           <p>
             I am <%= person.firstName %> <%= person.lastName %>, a junior web developer.
             <br/>
           My technical skills include using programming languages such as JavaScript (Node.js, React), jQuery, HTML and CSS.  MySQL and MongoDB.
+          To know more about me and my skills, please browse this portfolio website, you may also take a look at my Linkedin page and download my CV.
           </p>
         </div> <!-- Div with all paragraphs ENDS-->
-      <!-- </div>   -->
+      </div>  
     </div>
-    <!-- "About" Section ENDS -->
-    <div class="separator"></div> <!--separator-->
+    <!-- "ABOUT" Section ENDS -->
+   
 		<!-- "Work" Section BEGINS -->
 		<div id="work" >
 				<h1 id="projects"> Olga's Projects </h1>
@@ -98,7 +99,7 @@
     <!-- "Work" Section ENDS -->
     <div id="footer">
       <ul id="navbar" class="navbar">
-        <li><a href="#bamboo" class="active">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#aboutMeLeft">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="contact" target="_blank">Contact</a></li>

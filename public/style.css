@@ -22,16 +22,15 @@ body {
   position: relative;
   float: left;
   top:15px;
-  /* left:15px; */
   width: 10%;
   border-radius: 50%;
   transform: scaleX(-1);
+  min-width: 150x;
 }
 /* Style for logo in left corner in "HOME" Section */
 #logo-name{
   position: relative;
   top: 30px;
-  /* left: 180px; */
   float: left;
   
 }
@@ -43,19 +42,30 @@ body {
 }
 
 /*Style "Home" Section */
-#bamboo {
+#home {
+    padding:0;
     width: 100%;
     height: 100vh;
-    background-image: url('images/agave.jpeg');
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center center;
-    justify-content: center;
+}
+
+#home::after{
+  content:"";
+  background-image: url('images/agave.jpeg');
+  opacity: 0.8;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+  justify-content: center;
 }
 
 .topnav{
-  position: fixed;
+  position: absolute;
   top: 15px;
   right:5px;
   overflow: hidden;
@@ -104,58 +114,84 @@ ul {
 #typedtext{
   position: absolute;
   top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%); 
+  left: 20%;
+  transform: translate(-30%, -50%); 
   font-size: 2.5em;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
   /* color: #020200; */
   color:#ffffff;
   text-shadow: 5px 2px 6px #293d3d;  /*#e5e79d*/
   /* background-color: #e5e79d92; */
 }
+/*************** "ABOUT" SECTION ***************/
 /* Applying Flexible Layout to "About" Section */
 .aboutMe {
-  display: flex;
- 
-  background-color: white;
   color:#293d3d;
-} 
+  align-content: center;
+  position: relative;
+ } 
+ .aboutMeContainer{
+   /* position: absolute; */
+   /* top:50%; */
+   /* margin: -15% 0 0 -25%; */
+   height: 100vh;
+  }
+/*-JUST FOR TESTING,NEED TO DELETE*/
+.aboutMe {  
+  /* background-color: pink;  */
+}  
+/*-JUST FOR TESTING,NEED TO DELETE*/
+.aboutMeContainer{
+  /* background-color: orange; */
+}
+    
+/*-JUST FOR TESTING,NEED TO DELETE*/
+ #aboutMeLeft{
+  /* background-color: #4000ff;  */
+ }
 
-/*Making my image round in "About" Section*/
+ /*-JUST FOR TESTING,NEED TO DELETE*/
+ #aboutMeRight{
+  /* background-color: #00ff1a;  */
+ }
 
-#aboutMeContainer{
-  height: 80vh;
+/*Styling image in "About" Section*/
+.aboutMeContainer,
+#aboutMeLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
 }
-/* Style for h1 tag in About section */
-#aboutOlga{
-    color: #999999;
-    font-size: 2em;
-    font-family: 'Source Sans Pro', sans-serif;
+
+
+#myImage{
+  position: relative;
+  padding:25% 20px 25% 20px;
+  height: 50%;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 25% 0 25%;
+  /* background-color: plum; */
 }
-.separator{
-  height: 5vh;
-}
-#aboutMeLeft{
-  height: 90vh;;
-  width: 100%;
-  display: inline-block;
-  background-image:  url('images/IMG_9041_portfolio2.jpg');
-  /* background-image:  url('images/IMG_8999_portfolio1.jpg'); */
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 120%;
-}
+
 /*Paragraph styling in "About" Section*/
-#aboutMeRight p {
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  font-size: 2em;
+#aboutMeRight,
+#aboutMeRight h1  {
+  font-size: 1.4em;
   font-family: 'Source Sans Pro', sans-serif;
   color:#999999;
-  
+}
+.aboutMeRight,
+#aboutMeRight{
+  display: flex;
+  flex-direction: column;
+  padding: 15% 0 15% 5%;
+  justify-content:space-around;
 }
 /******* Styling "Work" Section *********/
 #work{
@@ -216,8 +252,6 @@ ul.navbar li{
   text-decoration: none;
   font-size: 15px;
   align-self: center;
-  
-  
 }
 
 /* Change the color of links on hover */
@@ -231,8 +265,6 @@ ul.navbar li{
   color: white;
 }
 /* Bottom FOOTER styling ENDS */
-
-
 
 
 /*Test Test Test*/
