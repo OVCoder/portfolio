@@ -1,31 +1,44 @@
 body {
-    background-color: #DCDCDC;
     margin: 0;
     padding: 0;
-    /* align-items: center; */
-    /* vertical-align: middle; */
 }
-#wrapper{
-    padding:20px;
-    margin: 20px;
-    /* vertical-align: middle; */
-    /* align-items: center; */
-    background-color: #f2f2f27e;
+
+div#wrapper {
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    padding-left: 2%;
     border: 3px solid #a1a1a1;
     background-image: url('images/agave.jpeg');
     opacity: 0.8;
-    
+    background-size: cover;
+    background-position:center center;
+    font-size: 1.2em;
+    color:#293d3d;
 }
-@media (min-width : 640px) {
+
+#contactForm label {
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 600px) {
+    #wrapper{
+        padding: 5px;
+        margin: 5px;
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width : 640px) {
     #wrapper{
         height: 50vh;
-        padding:10vh;
-        margin: 15vh;
-        /* vertical-align: middle; */
-        /* align-items: center; */
-        background-color: #f2f2f278;
         background-image: url('images/agave.jpeg');
         opacity: 0.8;
         border: 3px solid #a1a1a1; 
     }
-}
+} 
