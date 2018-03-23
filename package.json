@@ -6,6 +6,8 @@
   "scripts": {
     "build": "npm run less && webpack",
     "start": "npm run build && node server.js", 
+    "less": "lessc src/css/style.less dist/css/style.css",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
