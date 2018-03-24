@@ -1,6 +1,11 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url('images/agave.jpeg');
+    background-size: cover;
+    background-position:center center;
+    font-family: 'Source Sans Pro', sans-serif; 
+
 }
 
 div#wrapper {
@@ -10,10 +15,8 @@ div#wrapper {
     right: 5%;
     bottom: 5%;
     left: 5%;
-    padding-left: 2%;
-    border: 3px solid #a1a1a1;
-    background-image: url('images/agave.jpeg');
-    opacity: 0.8;
+    padding-left: 4%;
+    /* background-image: url('images/circlesOfTree.jpeg'); */
     background-size: cover;
     background-position:center center;
     font-size: 1.2em;
@@ -25,7 +28,12 @@ div#wrapper {
     display: inline-block;
     vertical-align: top;
 }
-
+#contactForm input {
+    width: 522px;
+}
+form#message {
+    align-self: bottom;
+}
 @media only screen and (max-width: 600px) {
     #wrapper{
         padding: 5px;
@@ -37,8 +45,6 @@ div#wrapper {
 @media only screen and (min-width : 640px) {
     #wrapper{
         height: 50vh;
-        background-image: url('images/agave.jpeg');
-        opacity: 0.8;
-        border: 3px solid #a1a1a1; 
+        
     }
 } 
