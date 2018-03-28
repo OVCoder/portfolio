@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 var profile = require('./profile');
 
+
+
 const app = express();
 
 app.use(morgan('dev'));
@@ -42,6 +44,8 @@ app.post('/thanks', (req, res) => {
     res.render('thanks', { contact: req.body })  
 });
    
+
+
 app.listen(process.env.PORT || 8080, () => {
     console.log('listening at http://localhost:8080');
 });
