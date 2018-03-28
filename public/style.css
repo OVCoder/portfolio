@@ -233,7 +233,7 @@ ul.navbar li{
 }
 #navbar {
   position: fixed;
-  bottom: 25px;
+  bottom: 0px;
   width: 100%;
   /* display: block; */
   transition: bottom 0.3s;

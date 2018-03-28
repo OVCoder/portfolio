@@ -33,7 +33,7 @@ app.get('/', (req, res) =>{
             lastName: 'Volodko',
         }
     }
-  res.render('index', data); //here 'index' is the view argument, which is a string that is the file path of the view file to render.
+    res.render('index', data); //here 'index' is the view argument, which is a string that is the file path of the view file to render.
 });
 
 app.get('/contact',(req, res) => {
@@ -41,11 +41,9 @@ app.get('/contact',(req, res) => {
 });
 
 app.post('/thanks', (req, res) => {
-    res.render('thanks', { contact: req.body })  
+    res.render('thanks', { contact: req.body });
 });
-   
-
-
+  
 app.listen(process.env.PORT || 8080, () => {
     console.log('listening at http://localhost:8080');
 });

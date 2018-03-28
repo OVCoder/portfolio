@@ -3,8 +3,7 @@
     <title>Contact Olga</title>
 		<link rel="stylesheet" type="text/css" href="contact.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> -->
-  </head>
+	</head>
   <body>
     <div><!--START-->
 			<div id="wrapper">
@@ -52,28 +51,33 @@
 					<h3>Error</h3>
 					Sorry there was an error sending your form.
 				</div>
-				<iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
+				<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfN4dRF-XhfGXgoJqj61_78QQAN_lwSCVGDu3dp8xBF-SkqhQ/formResponse?entry.655350568=Olga&entry.1024404671=Volodko&entry.958991815=olgagasenko%40gmail.com&entry.1891416769=6197465298&entry.578621625=2%3A45pm&submit=formSubmit" id="no-target" name="no-target" style="visibility:hidden"></iframe> -->
 			</div>
 		</div><!--END-->
 		
 		<script>
-				$('#contactForm').on('submit',function(){
-						var firstName = encodeURIComponent($('#firstName').val());
-						var secondName = encodeURIComponent($('#lastName').val());
-						var email = encodeURIComponent($('#email').val()); 
-						var phone = encodeURIComponent($('#phoneInput').val());
-						var message = encodeURIComponent($('#message').val());
-						var q1ID = "entry.655350568";
-						var q2ID = "entry.1024404671";
-						var q3ID = "entry.958991815";
-						var q4ID = "entry.1891416769";
-						var q5ID = "entry.578621625";
-            var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfN4dRF-XhfGXgoJqj61_78QQAN_lwSCVGDu3dp8xBF-SkqhQ/formResponse?';
-					  var submitRef = '&submit=formSubmit';
-						var submitURL = (baseURL + q1ID + "=" + firstName + "&" + q2ID + "=" + secondName + "&" + q3ID + "=" + email + "&" + q4ID + "=" + phone + "&" + q5ID + "=" + message + submitRef);
-						console.log(submitURL);
-						$(this)[0].action=submitURL;
-				});
+		// This script will save message details to google sheets
+		
+			$('#contactForm').on('submit',function(){
+					var firstName = encodeURIComponent($('#firstName').val());
+					var secondName = encodeURIComponent($('#lastName').val());
+					var email = encodeURIComponent($('#email').val()); 
+					var phone = encodeURIComponent($('#phoneInput').val());
+					var message = encodeURIComponent($('#message').val());
+					var q1ID = "entry.655350568";
+					var q2ID = "entry.1024404671";
+					var q3ID = "entry.958991815";
+					var q4ID = "entry.1891416769";
+					var q5ID = "entry.578621625";
+					var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfN4dRF-XhfGXgoJqj61_78QQAN_lwSCVGDu3dp8xBF-SkqhQ/formResponse?';
+					var submitRef = '&submit=formSubmit';
+					var submitURL = (baseURL + q1ID + "=" + firstName + "&" + q2ID + "=" + secondName + "&" + q3ID + "=" + email + "&" + q4ID + "=" + phone + "&" + q5ID + "=" + message + submitRef);
+					console.log(submitURL);
+					
+					$.ajax({
+						url:submitURL
+					});
+			});
 		</script>
   </body>
 </html>
