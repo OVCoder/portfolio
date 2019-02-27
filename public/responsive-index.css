@@ -1,11 +1,12 @@
 @media screen and (min-width:480px){
     
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   body {
 		width: 100%;
 		min-width: 300px;
 	}
+
 	#wrapper{
 		padding:0;
 		margin:0;
@@ -14,9 +15,12 @@
   #logo-name h1{
     font-size: 15px;
 	}
+
 	#smallImageHome{
-		min-width: 150px;
+		width: 10%;
+		min-width: 100px;		
 	}
+
 	#typedtext{
 		max-width: 230px;
 		font-size: 20px;
@@ -28,6 +32,7 @@
     left: 20px;
     transform: translate(-20px, -50%); 
 	}
+
   .aboutMeContainer,
   #aboutMeLeft {
     display: flex;
@@ -40,3 +45,4 @@
 	}
 
 }
+
