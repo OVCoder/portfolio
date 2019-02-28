@@ -1,9 +1,5 @@
-@media screen and (min-width:480px){
-    
-}
-@media screen and (max-width: 1024px) {
+@media (max-width: 768px) {
   body {
-		width: 100%;
 		min-width: 300px;
 	}
 
@@ -17,8 +13,13 @@
 	}
 
 	#smallImageHome{
-		width: 10%;
-		min-width: 100px;		
+		position: relative;
+		float: left;
+		top:15px;
+		width: 50%;
+	  border-radius: 50%;
+		transform: scaleX(-1);
+		min-width: 150px;		
 	}
 
 	#typedtext{
@@ -45,4 +46,27 @@
 	}
 
 }
+@media(min-width: 769px){
+/* .main-header,
+	.topnav {
+		display: flex;
+	} */
+	.main-header {
+		flex-direction: row;
+		align-items: left;
+		padding-left: 15px;
+  }
+  #smallImageHome{
+		position: relative;
+		float: left;
+		top:15px;
+		width: 30%;
+	  border-radius: 50%;
+		transform: scaleX(-1);
+		min-width: 150px;
+	}
+
+
+}
+
 

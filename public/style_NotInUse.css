@@ -1,7 +1,6 @@
 body {
     background: #136a8a; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #beffda, #befffd);
-    /* background: linear-gradient(to left, #f6ffef, #deffd4); */
     background: linear-gradient(to left, #d1e0e0, #a3c2c2);
     margin: 0;
     padding: 0;
