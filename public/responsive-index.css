@@ -1,163 +1,174 @@
-/* @media (max-width: 768px) { */
-  body {
-		background: #136a8a; /* fallback for old browsers */
-    background: linear-gradient(to left, #e7eade, #b6d0c4);
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+@media (max-width: 350px){
+	#typedtext{
+		display: none;
 	}
+}
 
-	#wrapper{
-		padding:0;
-		margin:0;
-	}
+body {
+	background: #136a8a; /* fallback for old browsers */
+	background: linear-gradient(to left, #e7eade, #b6d0c4);
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	padding:0;
+	margin:0;
+}
+
+/*Style "Home" Section */
+#home {
+	padding:0;
+	width: 100%;
+	height: 100vh;
+}
+
+#smallImageHome{
+	display: block;
+	/* position: relative; */
+	float: left;
+	top:15px;
+	width: 50%;
+	border-radius: 50%;
+	transform: scaleX(-1);
+	min-width: 150px;		
+}
+
+/* Style for logo in left corner in "HOME" Section */
+#logo-name{
+	position: relative;
+	top: 30px;
+	float: left;
+	display: block;
+}
+
+#home::after{
+	content:"";
+	background-image: url('images/agave.jpeg');
+	opacity: 0.8;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	position: absolute;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center center;
+	justify-content: center;
+}
+
+#logo-name h1{
+	font-family: 'Source Sans Pro', sans-serif; 
+	color: #293d3d;
+	margin: 0;
+	font-size: 40px;
+}
+
+.topnav{
+	margin-top: 20px;
+	display: block;
+	float: left;
+	position: relative;
+	top: 5vh;
+	right:5px;
+	overflow: hidden;
+}
+
+/* Style for the quote on Home page*/
+#typedtext{
+	/* display: block;
+	float: left; */
+	max-width: 230px;
+	font-size: 40px;
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	text-align: left;
+	position: relative;
+	top: 5%;
+	left: 20px;
+	transform: translate(-20px, -50%); 
+}
+
+.aboutMeContainer,
+#aboutMeLeft {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+} 
+#aboutMeLeft{
+	display: block;
+	float: left;
+}
+
+#myImage{
+	max-width: 200px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	/* color: #16441a; */
+	color:#293d3d;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	/* background-color: #e5e79d92; */
+	/* background-color: #f0f5f580 */	
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	text-decoration: underline;
+	color: #19491e;
 	
-	/*Style "Home" Section */
-	#home {
-		padding:0;
-		width: 100%;
-		height: 100vh;
-	}
+}
 
-	#smallImageHome{
-		display: block;
-		/* position: relative; */
-		float: left;
-		top:15px;
-		width: 50%;
-	  border-radius: 50%;
-		transform: scaleX(-1);
-		min-width: 150px;		
-	}
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+	display: none;
+}
 
-	/* Style for logo in left corner in "HOME" Section */
-	#logo-name{
-		position: relative;
-		top: 30px;
-		float: left;
-		display: block;
-	}
-	
-	#home::after{
-		content:"";
-		background-image: url('images/agave.jpeg');
-		opacity: 0.8;
-		top:0;
-		left:0;
-		bottom:0;
-		right:0;
-		position: absolute;
-		z-index: -1;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position:center center;
-		justify-content: center;
-	}
+/* Remove bullet points in navigation bar (for unordered list) */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
-  #logo-name h1{
-		font-family: 'Source Sans Pro', sans-serif; 
-		color: #293d3d;
-		margin: 0;
-    font-size: 40px;
-	}
+@media (min-width: 320px) {
 	.topnav{
+		margin-top: 20px;
 		display: block;
-		float: left;
+		float: right;
 		position: relative;
-		top: 15px;
+		top: 5vh;
 		right:5px;
 		overflow: hidden;
 	}
 
 	#typedtext{
 		max-width: 230px;
-		font-size: 20px;
+		font-size: 40px;
 		font-family: "Times New Roman", Times, serif;
 		font-style: italic;
 		text-align: left;
 		position: absolute;
-    top: 55%;
-    left: 20px;
-    transform: translate(-20px, -50%); 
+		top: 55%;
+		left: 20px;
+		transform: translate(-20px, -50%); 
 	}
+}
 
-  .aboutMeContainer,
-  #aboutMeLeft {
-    display: flex;
-		flex-direction: column;
-		justify-content: center;
-	} 
-	#aboutMeLeft{
-		display: block;
-		float: left;
-	}
-	
-	#myImage{
-		max-width: 200px;
-	}
-
-	/* Style the links inside the navigation bar */
-	.topnav a {
-		float: left;
-		/* color: #16441a; */
-		color:#293d3d;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-		font-size: 40px;
-		font-family: 'Source Sans Pro', sans-serif;
-		/* background-color: #e5e79d92; */
-		/* background-color: #f0f5f580 */	
-	}
-
-	/* Change the color of links on hover */
-	.topnav a:hover {
-		color: black;
-	}
-
-	/* Add a color to the active/current link */
-	.topnav a.active {
-		text-decoration: underline;
-		color: #19491e;
-		
-	}
-
-	/* Hide the link that should open and close the topnav on small screens */
-	.topnav .icon {
-		display: none;
-	}
-
-	/* Remove bullet points in navigation bar (for unordered list) */
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	/* Style for the quote on Home page*/
-	#typedtext{
-		position: absolute;
-		top: 50%;
-		left: 20%;
-		transform: translate(-30%, -50%); 
-		font-size: 2.5em;
-		text-align: center;
-		/* font-family: 'Source Sans Pro', sans-serif; */
-		font-family: "Times New Roman", Times, serif;
-		font-style: italic;
-		/* color: #020200; */
-		color:#ffffff;
-		text-shadow: 5px 2px 6px #293d3d;  /*#e5e79d*/
-		/* background-color: #e5e79d92; */
-	}
-
-/* } */
 @media(min-width: 769px){
-/* .main-header,
-	.topnav {
-		display: flex;
-	} */
-
 	.main-header {
 		flex-direction: row;
 		align-items: left;
@@ -168,7 +179,7 @@
 		position: relative;
 		float: left;
 		top:15px;
-		width: 10%;
+		width: 20%;
 	  border-radius: 50%;
 		transform: scaleX(-1);
 		min-width: 150px;
@@ -187,12 +198,12 @@
 		font-size: 50px;
 	}
 
-	.topnav{
+	/* .topnav{
 		position: absolute;
 		top: 15px;
 		right:5px;
 		overflow: hidden;
-	}
+	} */
 	
 }
 
